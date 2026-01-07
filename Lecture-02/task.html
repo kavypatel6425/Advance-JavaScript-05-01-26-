@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <script>
+        //1. Fix a Scope Bug (Production Scenario)
+
+        // if (true) {
+        //     let isLoggedIn = true;
+        // }
+        // console.log(isLoggedIn);
+
+        //2. Prevent Global Pollution
+
+        // function save() {
+        //     let data = "saved";
+        //     console.log(data);
+
+        // }
+
+        // save()
+
+        //3. Refactor for Immutability
+
+        // const TAX_RATE = 18;
+        // TAX_RATE = 20;
+        // console.log(TAX_RATE);
+
+        //4. Resolve TDZ Error
+
+        // let count = 5;
+        // console.log(count);
+
+        //5. Fix Shadowing Bug
+
+        // let price = 100;
+
+        // function calculate() {
+        //     let price = 200;
+        //     console.log(price);
+        // }
+
+        // calculate(); // 200
+
+
+        //6. Correct Loop Bug (Classic Interview)
+
+        // for (let i = 0; i < 3; i++) {
+        //     setTimeout(() => console.log(i), 0);
+        // }
+
+        //7. Secure Configuration Object
+
+        // let config= (api,"/users");
+        // console.log(config);
+
+        //8. Fix Redeclaration Issue
+
+        // let user = "Admin";
+        // user = "Guest";
+
+        // console.log(user);
+
+        //9. TDZ in Conditional Logic
+
+        // if (true) {
+        //     let status = "active";
+        //     console.log(status);
+        // }
+
+        //10. Convert Legacy Code to Modern JS
+
+        // let total = 0;
+
+        // if (true) {
+        //     let total = 100;
+        //     console.log(total);
+        // }
+
+        //11. Identify Correct Keyword (Design Task)
+
+        // const MAX_USERS = 100;
+        // console.log(MAX_USERS);
+
+        //12. Fix Function Scope Leak
+
+        // function increment() {
+        //     let count = 1;
+        //     console.log(count);
+        // }
+        // increment();
+
+        //13. Refactor for Readability
+
+        // const score = 10;
+        // console.log(score);
+
+
+        //14. TDZ Debug Task
+
+        // function test() {
+        //     let x = 5;
+        //     console.log(x);
+        // }
+
+        //15. Best Practice Enforcement (Rule)
+
+        // Always use const by default.
+        // Switch to let only when reassignment is required.
+        // Never use var.
+
+    </script>
+</body>
+
+</html>

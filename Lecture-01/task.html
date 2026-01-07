@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //1. Hoisting with var
+        // Question: What will be the output of the following code when accessed before variable initialization using var?
+        //Anser
+
+        // console.log(a);
+        // var a = 10;
+
+        //Output = undefined
+
+        //2. Hoisting with let (TDZ)
+
+        // console.log(b);
+        // let b = 20;
+
+        //Output = Uncaught ReferenceError: Cannot access 'b' before initialization
+
+
+        //3. Block Scope Access
+
+        // if (true) {
+        //     let x = 5;
+        // }
+
+        // console.log(x);
+
+        // let & cost = x is not defined
+        // ver = 5
+
+        //4. Function Scope with var
+
+        // function test() {
+        //     var y = 10;
+        // }
+        // test();
+        // console.log(y);
+
+        //Output = y is not defined
+
+        //5. Scope Chain Lookup
+
+        // let a = 1;
+        // function foo() {
+        //     console.log(a);
+        // }
+        // foo();
+
+        //Output = 1
+
+        //6. Variable Shadowing
+
+        // let x = 10;
+        // function test() {
+        //     let x = 20;
+        //     console.log(x);
+        // }
+        // test();
+        // console.log(x);
+
+        //Output = 20 , 10
+
+        //7. Function Declaration Hoisting
+
+        // sayHi();
+
+        // function sayHi() {
+        //     console.log("Hi");
+        // }
+
+        //Output = Hi
+
+        //8. Function Expression Hoisting
+
+        // sayHello();
+
+        // var sayHello = function () {
+        //     console.log("Hello");
+        // };
+
+        //Output = sayHello is not a function
+
+        //9. TDZ Inside a Block
+
+        // {
+        //     console.log(a);
+        //     let a = 10;
+        // }
+
+        // Output = Cannot access 'a' before initialization
+
+        //10. Closure Output (State Preservation)
+
+        // function outer() {
+        //     let count = 0;
+        //     return function () {
+        //         count++;
+        //         return count;
+        //     };
+        // }
+
+        // const fn = outer();
+        // console.log(fn());
+        // console.log(fn());
+
+        // Output = 1 , 2
+
+        //11. Multiple Closures
+
+        // function makeFn() {
+        //     let x = 1;
+        //     return function () {
+        //         return x++;
+        //     };
+        // }
+
+        // const a = makeFn();
+        // const b = makeFn();
+
+        // console.log(a());
+        // console.log(b());
+
+        // Output = 1 , 1
+
+        //12. Implicit Global Variable
+
+
+        // function test() {
+        //     x = 100;
+        // }
+        // test();
+        // console.log(x);
+
+        // Output = 100
+
+        //13. var and Block Scope
+
+        // if (true) {
+        //     var a = 10;
+        // }
+        // console.log(a);
+
+        // Output = 100
+
+        //14. TDZ with Shadowing
+
+        // let a = 5;
+        // function test() {
+        //     console.log(a);
+        //     let a = 10;
+        // }
+        // test();
+
+        // Output = Cannot access 'a' before initialization
+
+        //15. Missing Variable in Scope Chain
+
+        // function test() {
+        //     console.log(x);
+        // }
+        // test();
+
+        //Output = x is not defined
+
+    </script>
+</body>
+
+</html>
