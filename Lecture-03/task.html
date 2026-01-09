@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <button id="Btn">click</button>
+    <script>
+        //1.  Fix Global this Misuse
+
+        // const user = {
+        //     name: "Kavy"
+        // };
+        // function show() {
+        //     console.log(this.name);
+        // }
+
+
+        // show.call(user);
+
+
+        //2. Preserve this in Object Method
+
+        // const user = {
+        //     name: "Jay",
+        //     greet() {
+        //         setTimeout(() => {
+        //             console.log(this.name);
+        //         }, 1000);
+        //     }
+        // };
+
+        // user.greet();
+
+        //3. Fix Method Extraction Bug
+
+        // const user = {
+        //     name: "Jay",
+        //     getName() {
+        //         return this.name;
+        //     }
+        // };
+
+        // const fn = user.getName();
+        // console.log(fn);
+
+        //4. Correct Event Handler this
+
+        // let button = document.getElementById("Btn");
+
+        // button.addEventListener("click", function () {
+        //     console.log(this);
+        // });
+
+        //5. Fix Nested Function Context
+
+        // const user = {
+        //     name: "Jay",
+        //     greet(name) {
+        //         let inner=()=> {
+        //             console.log(this.name);
+        //         }
+        //         inner();
+        //     }
+
+        // };
+
+        // user.greet();
+
+
+        //6. Convert to bind() Usage
+
+        // let obj1 = {
+        //     name: "kavy",
+        //     greet() {
+        //         setTimeout(function () {
+        //             console.log(this.name);
+        //         }.bind(this), 1000);
+        //     }
+        // }
+
+        // obj1.greet()
+
+        //7. Fix Constructor Misuse
+
+
+        // function User(name) {
+        //     this.name = name;
+        // }
+
+        // const u = new User("Jay");
+        // console.log(u);
+
+
+        //8. Choose Correct Function Type
+
+        // Task: Which function type should be used for object methods?
+        //Ans : Normal function
+
+        //9. Fix Callback Context Loss
+
+        // let user = {
+        //     name: "kavy",
+        //     greet() {
+
+        //         setTimeout(user.getName.bind(user), 1000);
+        //     }
+        // }
+
+        // setTimeout(user.getName.bind(user), 1000);
+
+
+        //10.  Refactor Using call()
+
+
+        // let obj4 = {
+        //     name:"Kavy",
+        //     city:"Idar"
+        // }
+        // function greet(city) {
+        //     console.log(this.name, city);
+        // }
+
+        // greet.call(obj4,city);
+
+
+        //11. Refactor Using apply()
+
+        // function greet(city) {
+        //     console.log(`Hello ${this.name} from ${city}`);
+        // }
+
+        // let user = {
+        //     name: "Kavy"
+        // };
+
+        // greet.apply(user, ["Idar"]);
+
+        //12. Permanent Context Fix
+
+        // const greetUser = greet.bind();
+
+        // function greet(city) {
+        //     console.log(`Hello ${this.name} from ${city}`);
+        // }
+
+        // let user = {
+        //     name: "Kavy"
+        // };
+        // const greetUser = greet.bind(user, "Pune");
+        // greetUser();
+
+        //13. Identify Context Bug
+
+        // const obj = {
+        //     name: "Jay",
+        //     arrow() {
+        //         console.log(this.name);
+        //     }
+        // };
+
+        // obj.arrow(); // Jay
+
+        //14. Fix Arrow Misuse
+
+        const obj = {
+            name: "Jay",
+            show() {
+                console.log(this.name)
+            }
+        };
+
+        // const obj = {
+        //     name: "Jay",
+        //     show() {
+        //         console.log(this.name);
+        //     }
+        // };
+
+        // obj.show(); // Jay
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
