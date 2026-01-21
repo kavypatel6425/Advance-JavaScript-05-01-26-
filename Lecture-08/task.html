@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <!-- <button id="btn" onclick="click()">click</button> -->
+    <script>
+        //1.Prevent Runtime Error on Deep Property Access
+
+        // let user = {
+        //     address:{
+        //         city:"Idar"
+        //     },
+        //     logout() {
+        //         console.log("User logged out");
+        //     }
+        // }
+        // console.log(user?.address?.city);
+
+        //2.Safe Method Invocation
+
+        // const user = {
+        //     name: "Kavy",
+
+        // };
+
+        // user?.logout();
+
+        //3.Provide Default Value for null
+
+        // let settings = null;
+
+        // const theme1 = settings || "light";
+        // const theme2 = settings ?? "light";
+
+        // const theme = settings?.theme ?? "light";
+
+        // console.log(theme1);
+        // console.log(theme2);
+        // console.log(theme);
+
+        //4. Safe Array Index Access
+
+        // let users = [10,20,30]
+
+        // console.log(users?.[0]?.name);
+
+        //5.Defensive API Response Handling
+
+        // const res = {}; 
+
+        // const title = res?.data?.post?.title;
+        // console.log(title); 
+
+        //6.Identify Safer Operator
+
+        //Ans:nullies
+
+        //7. Safe Function Parameter Access
+
+        // let user = {
+        //     name:null,
+        // }
+        // function greet() {
+        //     console.log(user?.name);
+        // }
+
+        // greet();
+
+        //8. Defensive Object Access in Loop
+
+        // let users = {
+        //     name: "kavy"
+        // }
+
+        // users.forEach(u => {
+        //     console.log(u?.name)
+        // });
+
+        //9.Replace Verbose Guard Checks
+
+        // let config = {
+        //     settings:{
+        //         mode:"dark"
+        //     }
+        // };
+        // if (config && config.settings && config.settings.mode) {
+        //     mode = config.settings.mode;
+        // }
+        // console.log(config?.settings?.mode);
+
+        //10.Safe DOM Access
+
+        function fn() {
+            
+            let a = document?.querySelector("#btn")?.addEventListener("click", fn);
+            console.log(a);
+        }
+
+        fn();
+
+
+        //11. Combine ?. and ??
+
+        // let user = {
+        //     profile:{
+        //         role:null
+        //     }
+        // }
+        // const role =userpro.file??role;
+
+        // console.log(role);
+
+        //12.Identify Defensive Programming Goal
+
+        //13.Fix Boolean Override Bug
+        // let user = {
+        //     isAdmin:true
+        // }
+
+        // const isAdmin = user?.isAdmin?? true;
+        // console.log(isAdmin);
+
+        //14.Safe Nested Function Call
+
+        // let user = {
+        //     permissions:
+        //     check(){
+
+        //     }
+        // }
+        // user?.permissions?.check();
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

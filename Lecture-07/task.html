@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.Fix Array Copy Bug
+
+        // let arr = [1, 2, 3];
+        // let copy = [...arr, 4];
+        // console.log(copy);
+
+        //2. Merge Arrays Safely
+
+        // let arr = [1, 2, 3];
+        // let arr1 = [10,20,30];
+
+        // console.log(...arr,...arr1);.
+
+        //3.Collect Function Arguments
+
+        // function sum(...nums) {
+        //     return nums.reduce((a, b) => a + b, 0);
+        // }
+
+        // console.log(sum(1, 2, 3, 4));
+
+        //4.Fix Object Mutation
+
+        // let obj = {
+        //     name:"Kavy",
+        //     age: 18
+        // }
+
+        // let obj1 = {...obj,age:19};
+        // console.log(obj1);
+
+        //5.Extract Object Properties
+
+        // let user = { name: "Jay", age: 25 };
+
+        // let { name, age } = user;
+
+        // console.log(name); 
+        // console.log(age);  
+
+        //6. Rename During Destructuring
+
+        // let user = { name: "Kavy", age: 19 };
+
+        // let { name: userName, age } = user;
+
+        // console.log(userName); 
+        // console.log(age);      
+
+        //7. Set Default Values
+
+        // const user = { name: "Kavy", age: 19 };
+
+        // const { role = "User" } = user;
+
+        // console.log(role); 
+
+        //8. Destructure Array Values
+
+        // const arr = [10, 20, 30];
+
+        // const [a,b] =arr;
+
+        // console.log(a);
+        // console.log(b);
+
+        //9.Skip Unwanted Values
+
+        // const [, b] = arr;
+        // console.log(b);
+
+        //10.Swap Variables Cleanly
+
+        // let a = 5, b = 10;
+        // console.log([a, b] = [b, a]);
+
+
+        //11.Nested Object Destructuring
+        // const person = {
+        //     address: {
+        //         city: "Delhi"
+        //     }
+        // };
+
+        // const { address: { city } } = person;
+
+        // console.log(city);
+
+
+
+
+
+        //12.Destructure Function Parameters
+        let name = "kavy";
+        function greet() {
+            console.log(`Hello, ${name}`);
+            // console.log( name);
+        }
+
+        greet();
+        
+
+        //13.
+
+        // const user = { id: 1, name: "Kavy", age: 19 };
+
+        // const { id, ...rest } = user;
+
+        // console.log(id);    
+        // console.log(rest);  
+
+        //14 Choose Correct Operator
+
+        // Answer: ... (Rest operator)
+
+        //15 Best Practice Decision
+
+        // Answer: Destructuring
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
