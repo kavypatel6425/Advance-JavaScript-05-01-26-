@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1 id="title"></h1>
+    <p class="item"></p>
+    <p class="item"></p>
+    <p class="item"></p>
+    <p class="item"></p> -->
+
+    <!-- <div id="parent">
+        <button id="child">Click</button>
+    </div>-->
+    <!-- 
+    <ul id="list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ul> -->
+
+    <!-- <button ></button>    -->
+
+    <!-- <h1 id="h1">Lorem ipsum dolor sit amet.</h1>
+
+    <button onclick="chengecolor()" id="btn">Click</button> -->
+
+    <!-- 
+    <form id="myForm">
+        <input type="text" placeholder="Enter name" required />
+        <button type="submit">Submit</button>
+    </form> -->
+
+    <script>
+        //1.Select Single Element Safely
+
+        // document.getElementById("title");
+
+        //2.Select Multiple Elements
+
+        // document.getElementsByClassName("item");
+
+        //3.Fix null Selector Crash
+
+        // document.querySelector("#btn")?.addEventListener("click", fn);
+
+        //4.Stop Event Bubbling
+
+        // child.addEventListener("click", (e) => {
+        //     e.stopPropagation();
+        // });
+
+        // child.addEventListener("click", (e) =>
+        //     e.stopPropagation()
+        // );
+
+        //5. Enable Event Capturing
+
+        // parent.addEventListener(
+        //     "click",
+        //     () => console.log("Parent"),
+        //     true
+        // );
+
+
+        // child.addEventListener(
+        //     "click",
+        //     () => console.log("child"),
+        //     true
+        // );
+
+
+        //6.Identify Event Flow Order
+
+        // ans:capturing
+
+        //7.Fix Multiple Listener Performance Issue
+
+
+        // const list = document.querySelector("#list");
+
+        // list.addEventListener("click", (e) => {
+        //     if (e.target.tagName === "LI") {
+        //         console.log(e.target.textContent);
+        //     }
+        // });
+
+        //8. Implement Event Delegation
+
+        //9.Identify Event Target Correctly
+
+
+        // function chengecolor() {
+        //     document.getElementById("h1").style.backgroundColor = "red"
+        // }
+
+        //10.Remove Event Listener
+
+        // document.removeEventListener("chengecolor")
+
+        //11.
+
+        // const form = document.querySelector("form");
+
+        // form.addEventListener("submit", (e) => {
+        //     e.preventDefault();
+        //     console.log("Form submitted via JS");
+        // });
+
+        //12.
+
+        // Answer: Throttle or debounce the handler.
+
+        //13.
+
+        //    ans:  Hard to maintain
+        //          Cannot be easily removed
+
+        //14.
+
+        // Answer: querySelector() / querySelectorAll()
+
+        //15.
+
+        // ans:Event Delegation
+
+
+
+    </script>
+</body>
+
+</html>

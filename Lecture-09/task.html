@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <script>
+        //1. Persist Login Status
+
+        // const isLoggedIn = true;
+
+        // localStorage.setItem("isLoggedIn" , "true")
+        // console.log(isLoggedIn);
+
+
+        //2.Read Boolean Value Correctly
+
+        // const status = localStorage.getItem("isLoggedIn");
+
+        // const status = JSON.stringify(localStorage.getItem("isLoggedIn"));
+        // console.log(status);
+
+        //3.Store User Preferences Object
+
+        // const prefs = { lang: "en", theme: "dark" };
+
+        // localStorage.setItem("prefs", JSON.stringify(prefs));
+
+
+        //4.Safely Read Preferences
+
+        // const get = localStorage.getItem("prefs")
+        // console.log(get);
+        // localStorage.removeItem("prefs")
+
+        //5.Temporary OTP Storage
+
+        // const otp = 323430;
+
+        // sessionStorage.setItem("otp","323430")
+
+        //6.Identify Wrong Storage Choice
+
+        // ❓ Task
+        // OTP stored in localStorage.Why is this wrong ?
+
+        // ans:  localStorage data does not expire automatically, otp is one time passwored it is mean to temporary and 
+        //       single - use so can not store otp in localstored
+
+        //7.Remove User Data on Logout
+
+        // const user = {
+        //     name:"kavy",
+        //     age:19,
+        //     isLoggedIn:true
+        // }
+
+        // localStorage.setItem("name","kavy")
+        // localStorage.setItem("age","19")
+        // localStorage.setItem("isLoggedIn","true")
+
+        // localStorage.clear("user")
+
+        //8.Update Single Stored Field
+
+        // const prefs = { lang: "en", theme: "dark" };
+
+        // localStorage.setItem("theme","dark")
+
+        // const prefs =  JSON.parse(localStorage.getItem("prefs")) || {};
+
+        // prefs.theme = "light";
+        
+        // localStorage.setItem("prefs" , JSON.stringify(prefs));
+        
+        // localStorage.clear()
+        //9.Check Storage Support
+
+        //10.Store Array of Items
+
+        // const cart = [1, 2, 3];
+
+        // localStorage.setItem("cart", JSON.stringify(cart));
+
+        //11. Retrieve Stored Array
+
+        // const a =  JSON.parse(localStorage.getItem("cart"));
+        // console.log(a);
+
+        //12.Avoid Null Crash
+
+        // const obj = {
+        //     data:null,
+        //     name:"kavy"
+        // }
+        // localStorage.setItem("data","")
+        // let b = JSON.stringify(localStorage.getItem("data"));
+        // console.log(b);
+
+
+        //13.Session vs Local Decision
+
+        //ans:SessionStorage
+
+        //14.Count Stored Keys
+
+        // localStorage.setItem("name","Kavy")
+        // localStorage.setItem("age","19")
+        // localStorage.setItem("isLogin","True")
+        // localStorage.setItem("Corse","Full-Stec")
+
+        // console.log(localStorage.length);
+
+        //15. Best Practice Decision
+
+        //ans: covert objects velue in string using JSON.stringify 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
