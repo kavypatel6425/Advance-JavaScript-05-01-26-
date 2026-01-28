@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <script>
+        // Task 1: Create Your First Promise
+
+        // const fetchData = new Promise((resolve, reject) => {
+        //     let success = true;
+
+        //     setTimeout(() => {
+        //         if (success) {
+        //             resolve("“Welcome to Promises”.");
+        //         }
+        //     }, 2000);
+        // });
+
+        // fetchData
+        //     .then(result => console.log(result))
+
+        // Task 2: Promise Rejection Handling
+
+        // const randomPromise = new Promise((resolve, reject) => {
+        //     let success = Math.random() > 0.5;
+
+        //     setTimeout(() => {
+        //         if (success) {
+        //             resolve("Promise resolved successfully!");
+        //         } else {
+        //             reject("Promise rejected! Something went wrong.");
+        //         }
+        //     }, 1000);
+        // });
+
+        // randomPromise
+        //     .then(result => console.log(result))
+        //     .catch(error => console.error(error));
+
+        //Task 3: Promise States Simulation
+
+        // console.log("Promise is pending.........");
+
+        // const fetchData = new Promise((resolve, reject) => {
+
+        //     let success = false;
+
+        //     setTimeout(() => {
+        //         if (success == true) {
+        //             resolve("Promise is fulfilled");
+        //         } else {
+        //             reject("Promise is reject");
+        //         }
+        //     }, 1000);
+        // })
+
+        // fetchData
+        //     .then(result => console.log(result))
+        //     .catch(error => console.error(error));
+
+
+        //Task 4: Simple Fetch API Call
+
+        // fetch("https://jsonplaceholder.typicode.com/users")
+        //     .then(response => response.json())
+        //     .then(users => {
+        //         users.forEach(user => {
+        //             console.log(user.name);
+        //         });
+        //     })
+        //     .catch(error => console.error(error));
+
+        //Task 5: Handle Fetch Errors
+
+        // fetch("https://jsonplaceholder.typicode.com/users")
+        //     .then(response => {
+        //         if (response.ok) {
+        //             throw new Error("Failed to fetch users");
+        //         }
+        //         return response.json();
+        //     })
+        //     .then(users => {
+        //         users.forEach(user => {
+        //             console.log(user.name);
+        //         });
+        //     })
+        //     .catch(error => {
+        //         console.error("Error:", error.message);
+        //     });
+
+        //Task 6: Promise Chaining
+
+        // function getUser() {
+        //     return new Promise((resolve) => {
+        //             resolve({ id: 1, name: "kavy" })
+        //     })
+        // }
+
+        // function getOrders(user) {
+        //     return new Promise((resolve) => {
+        //             resolve(["order1", "order2"])
+        //     })
+        // }
+
+        // function processOrders(orders) {
+        //     return new Promise((resolve) => {
+        //         resolve(`Processed ${orders.length} orderd`)
+        //     })
+        // }
+
+        // getUser()
+        //     .then(user => getOrders(user.id))
+        //     .then(orders => processOrders(orders))
+        //     .then(result => console.log(result))
+        //     .catch(error => console.error(error));
+
+        //Task 7: Convert Callback Logic to Promises
+
+        // function getUser() {
+        //     return new Promise((resolve) => {
+        //         setTimeout(() => {
+        //         resolve({ id: 1, name: "kavy" })
+        //         }, 1000);
+        //     })
+        // }
+
+        // function getOrders(user) {
+        //     return new Promise((resolve) => {
+
+        //         setTimeout(() => {
+        //         resolve(["order1", "order2"])
+        //         }, 1000);
+        //     })
+        // }
+
+        // function processOrders(orders) {
+        //     return new Promise((resolve) => {
+        //         resolve(`Processed ${orders.length} orderd`)
+        //     })
+        // }
+
+        // getUser()
+        //     .then(user => getOrders(user.id))
+        //     .then(orders => processOrders(orders))
+        //     .then(result => console.log(result))
+        //     .catch(error => console.error(error));
+
+        //Task 8: Multiple Fetch Requests
+
+
+
+        // function getUser() {
+        //     return new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             resolve({ id: 1, name: "kavy" })
+        //         }, 1000);
+        //     })
+        // }
+
+        // function getPosts(user) {
+        //     return new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             resolve(["post1", "post2"])
+        //         }, 1000);
+        //     })
+        // }
+
+        // function getComments(posts) {
+        //     return new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             resolve("comments")
+        //         }, 1000);
+        //     })
+        // }
+
+        // getUser().then(user => console.log(user))
+        // getPosts().then(post => console.log(post))
+        // getComments().then(Comment => console.log(Comment))
+        // .catch(error => console.log(error))
+
+
+        //Task 9: Promise.all() Usage
+
+
+        // function getUser() {
+        //     return new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             resolve({ id: 1, name: "kavy" })
+        //         }, 1000);
+        //     })
+        // }
+
+        // function getPosts(user) {
+        //     return new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             resolve(["post1", "post2"])
+        //         }, 1000);
+        //     })
+        // }
+
+        // function getComments(posts) {
+        //     return new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             resolve("comments")
+        //         }, 1000);
+        //     })
+        // }
+
+        // Promise.all([getUser(), getPosts(), getComments(),])
+        //     .then(results => console.log(results))
+        //     .catch(error => console.log(error))
+
+        //Task 10: Promise.all() Failure Scenario
+
+        // function getUser() {
+        //     return new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             resolve({ id: 1, name: "kavy" })
+        //         }, 1000);
+        //     })
+        // }
+
+        // function getPosts(user) {
+        //     return new Promise((resolve,reject) => {
+        //         setTimeout(() => {
+        //             reject(["post1", "post2"])
+        //         }, 1500);
+        //     })
+        // }
+
+        // function getComments(posts) {
+        //     return new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             resolve("comments")
+        //         }, 1000);
+        //     })
+        // }
+
+        // Promise.all([getUser(), getPosts(), getComments()])
+        //     .then(results => {
+        //         console.log("All results:", results);
+        //     })
+        //     .catch(error => {
+        //         console.error("Promise.all failed:", error);
+        //     });
+
+        //Task 11: Promise.allSettled()
+
+        const p1 = Promise.resolve("API 1 success");
+        const p2 = Promise.reject("API 2 failed");
+        const p3 = Promise.resolve("API 3 success");
+
+        Promise.allSettled([p1, p2, p3])
+            .then(results => {
+                results.forEach((result, i) => {
+                    if (result.status === "fulfilled") {
+                        console.log(`Promise ${i + 1} Success:`, result.value);
+                    } else {
+                        console.log(`Promise ${i + 1} Failed:`, result.reason);
+                    }
+                });
+            });
+
+        //Task 12: Promise.race() Timeout
+
+        
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+
+    <!-- <button id="btn" onclick="click()">Button</button> -->
+    <script>
+        //1.Simple Callback Execution
+
+        // function greet(name, Callback) {
+        //     console.log("hello", name);
+        //     Callback();
+        // }
+
+        // function surname() {
+        //     console.log("Patel");
+        // }
+
+        // greet("Kavy",surname);
+
+        //2.Callback vs Normal Function Call
+
+        // function greet() {
+        //     console.log("hallo");
+        // }
+
+        // greet();
+
+
+
+        // function a(name, Callback) {
+        //     console.log("hello", name);
+        //     Callback();
+        // }
+
+        // function surname() {
+        //     console.log("Patel");
+        // }
+
+        // a("Kavy", surname);
+
+
+        // function logDirect() {
+        //     console.log("Direct: Message logged immediately");
+        // }
+
+        // console.log("Start");
+        // logDirect();
+        // console.log("End");
+
+
+        // function logWithCallback(callback) {
+        //     console.log("Callback function started");
+        //     callback();
+        // }
+
+        // function logMessage() {
+        //     console.log("Callback: Message logged later");
+        // }
+
+        // console.log("Start");
+        // logWithCallback(logMessage);
+        // console.log("End");
+
+
+        //3. Timer-Based Callback
+
+        // console.log("Start");
+
+        // setTimeout(() => {
+        //     console.log("Thse is the end");
+
+        // }, 2000);
+        // console.log("End");
+
+        //4. Countdown Timer
+
+        // let count = 0;
+
+        // setInterval(() => {
+        //     for (let i = 0; i < 5; i++) {
+        //         count++;
+        //     console.log(count);
+        //     }
+        // }, 1000);
+
+        //5. Event Callback (Button Click)
+
+        // let button = document.getElementById("btn");
+
+        // button.addEventListener("click", () => {
+        //     console.log("Button clicked");
+        // });
+
+        //6.Callback as Configuration
+
+        // function greet(a, b, operationCallback) {
+        //     console.log(a + b);
+        //     operationCallback();
+        // }
+
+        // function multiplication() {
+        //     console.log(a * b);
+        // }
+
+        // console.log(greet(10, 20, multiplication));
+
+        //7. Execution Order Prediction
+
+        // console.log("A");
+
+        // setTimeout(() => {
+        //     console.log("B");
+        // }, 0);
+
+        // console.log("C");
+
+        //8. Simulated API Request
+
+
+        // function fetchUserData(callback) {
+        //     setTimeout(() => {
+        //         const user = {
+        //             id: 1,
+        //             name: "Kavy",
+        //             role: "Student"
+        //         };
+
+        //         callback(user);
+        //     }, 1000);
+        // }
+
+        // fetchUserData((data) => {
+        //     console.log("User data received:", data);
+        // });
+
+        //9. Error-First Callback Pattern
+
+        // function fetchData(callback) {
+        //     setTimeout(() => {
+        //         if (Math.random() > 0.5) {
+        //             callback(null, "Data received");
+        //         } else {
+        //             callback("Error occurred", null);
+        //         }
+        //     }, 1000);
+        // }
+
+
+        // fetchData((error, data) => {
+        //     if (error) {
+        //         console.log(error);
+        //     } else {
+        //         console.log(data);
+        //     }
+        // });
+
+        //10.Sequential Async Operations.
+
+
+
+        // function loadUser(callback) {
+        //     setTimeout(() => {
+        //         callback(null, { id: 1, name: "Kavy" });
+        //     }, 500);
+        // }
+
+        // function loadPosts(userId, callback) {
+        //     setTimeout(() => {
+        //         callback(null, ["Post 1", "Post 2"]);
+        //     }, 500);
+        // }
+
+        // loadUser((err, user) => {
+        //     if (err) return;
+        //     loadPosts(user.id, (err, postes) => {
+        //         console.log(user, postes);
+
+        //     })
+        // })
+
+
+        //11.Identify Callback Hell
+
+        // function getUser(callback) {
+        //     setTimeout(() => {
+        //         callback(null, { id: 1, name: "Kavy" });
+        //     }, 500);
+        // }
+
+        // function getOrders(userId, callback) {
+        //     setTimeout(() => {
+        //         callback(null, ["order1", "order2"]);
+        //     }, 500);
+        // }
+
+        // getUser((err, user) => {
+        //     if (err) return;
+        //     getOrders(user.id, (err, order) => {
+        //         console.log(user, order);
+
+        //     })
+        // })
+
+
+        // 1)Readability Problems
+
+        //         1.Code is deeply nested
+
+        //         2.Hard to understand the flow
+
+        //         3.Looks confusing and messy
+
+        // 2)Maintenance Problems
+
+        //         1.Difficult to debug
+
+        //         2.Error handling becomes complex
+
+
+        //12.Refactor Callback Hell (Modular Functions)
+
+        // function handleOrders(orders) {
+        //     console.log(orders);
+        // }
+
+        // function loadOrders(user) {
+        //     getOrders(user.id, handleOrders);
+        // }
+
+        // function handleUser(user) {
+        //     loadOrders(user);
+        // }
+
+        // getUser(handleUser);
+
+
+        //13.Higher-Order Array Callback
+
+        const users = [
+            { id: 1, name: "Kavy", age: 22, active: true },
+            { id: 2, name: "Harsh", age: 17, active: false },
+            { id: 3, name: "Neha", age: 25, active: true }
+        ];
+
+        const userNames = users.map(function (user) {
+            return user.name;
+        });
+
+        console.log(userNames);
+
+        const activeUsers = users.filter(function (user) {
+            return user.active === true;
+        });
+
+        console.log(activeUsers);
+
+        activeUsers.forEach(function (user) {
+            console.log(user.name + " is active");
+        });
+
+        //14.Form Submission Callback
+
+        
+
+
+
+
+    </script>
+</body>
+
+</html>
