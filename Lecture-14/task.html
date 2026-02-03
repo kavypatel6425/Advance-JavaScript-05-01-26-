@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <script>
+
+        // Task 1 — Execution Order Prediction
+
+        // console.log("Start");
+        // Promise.resolve().then(() => console.log("Promise")); // Microtask Queue
+        // setTimeout(() => console.log("Timer"), 0);               // Macrotask Queue
+        // console.log("End");
+
+
+        //1.Call Stack
+        // JavaScript executes synchronous code first.
+        // Start and End run immediately.
+
+        //2.Microtask Queue
+        // Microtasks run after the call stack is empty and before macrotasks.
+        // So Promise runs next.
+
+        //3.Macrotask Queue
+        // They run after all microtasks finish.
+        // So Timer runs last.
+
+
+        //Task 2 — UI Freeze Investigation
+
+
+    </script>
+</body>
+
+</html>
