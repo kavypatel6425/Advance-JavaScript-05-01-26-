@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <script>
+        //1. Email Validator (test)
+
+        // const emailRegex = /^\S+@\S+\.\S+$/;
+        // console.log(emailRegex.test("kavy@gmail.com"));
+
+        //2. Phone Number Check
+
+        // const phonenumberRegex = /^\d{10}$/;
+        // console.log(phonenumberRegex.test("1305130700"));
+
+        //3. Username Rule Checker
+
+        // const usernameRegex = /^\S{5}$/;
+        // const usernameRegex = /^[a-zA-Z0-9]{5}$/;
+        // console.log(usernameRegex.test("sk135"));
+
+        //4. Safe Input Validation
+
+        // function validateInput(input) {
+        //     try {
+        //         const regex = /^[a-zA-Z0-9]{5,}$/;
+
+        //         if (!regex.test(input)) {
+        //             throw new Error("Validation failed: invalid input format");
+        //         }
+
+        //         console.log("true");
+
+        //     } catch (error) {
+        //         console.error(error.message);
+        //         console.log("false");
+        //     }
+        // }
+
+        // validateInput("kavy1");
+
+        //5. Debug a Failing test()
+
+        // const regex = /\d+/g;
+        // console.log(regex.test("123"));
+        // regex.lastIndex = 0;
+        // console.log(regex.test("123"));
+
+        //6.Extract Numbers from Text (exec)
+
+        // const regex = /\d+/;
+        // const result = regex.exec("Order123");
+
+        // console.log(result[0]); 
+
+        //7. Extract All Numbers (exec + g)
+
+        // const text = "I have 2 apples and 12 banana";
+        // const regex = /\d+/g;
+
+        // let result = regex.exec(text);
+        // console.log(result[0]);
+
+        // result = regex.exec(text);
+        // console.log(result[0]);
+
+        //8. Handle exec() Safely
+
+        // const text = "I have 2 apples";
+        // const regex = /\d+/g;
+
+        // let result = regex.exec(text);
+
+        // if (result !== null) {
+        //     console.log(result[0]);
+        // } else {
+        //     console.log("No number found");
+        // }
+
+        //9. Password Strength Checker
+
+        // function test(Password) {
+        //     try {
+        //         const regex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+        //         if (!regex.test(Password)) {
+        //             throw new Error("Validation failed: invalid password format");
+        //         }
+
+        //         console.log("True");
+        //     } catch (error) {
+        //         console.error(error.message);
+        //         console.log("False");
+        //     }
+        // }
+
+        // test("Kavy1305")
+
+        //10. Debug Regex State Bug
+
+        // // const r = /test/;
+        // const r = /test/g;
+        // console.log(r.test("test"));
+        // // r.lastIndex = 0;
+        // console.log(r.test("test"));
+
+        //whan we use g flag after the first match it start serching from end so second find nothig and it give false
+        //lastIndex moves forward.
+
+        //11. Form Validation Engine
+
+        // function validates(Email, Phone, Password) {
+        //     try {
+        //         const emailRegex = /^\S+@\S+\.\S+$/;
+        //         if (!emailRegex.test(Email)) {
+        //             throw new Error("Validation failed: invalid Email format");
+        //         }
+        //         console.log("true");
+
+        //     } catch (error) {
+        //         console.error(error.message);
+        //         console.log("False");
+        //     }
+
+        //     try {
+        //         const phonenumberRegex = /^\d{10}$/;
+        //         if (!phonenumberRegex.test(Phone)) {
+        //             throw new Error("Validation failed: invalid PhoneNumber format");
+        //         }
+        //         console.log("true");
+
+        //     } catch (error) {
+        //         console.error(error.message);
+        //         console.log("False");
+        //     }
+
+        //     try {
+        //         const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+        //         if (!passwordRegex.test(Password)) {
+        //             throw new Error("Validation failed: invalid Password format");
+        //         }
+        //         console.log("true");
+
+        //     } catch (error) {
+        //         console.error(error.message);
+        //         console.log("False");
+        //     }
+        // }
+
+        // validates("kavy@gmail.com", "9409502570", "Kavy1305");
+
+        //12. Log File Analyzer
+
+        // 13. Graceful Error Handler
+
+        // function validateUsername(username) {
+        //     try {
+        //         const regex = /^[a-zA-Z0-9]{5,}$/;
+
+        //         if (!regex.test(username)) {
+        //             throw new Error("Username must be at least 5 characters long and contain only letters and numbers.");
+        //         }
+
+        //         console.log("Username is valid");
+        //         console.log("true");
+
+        //     } catch (error) {
+        //         //Show user-friendly message
+        //         console.log("Oops! Something is wrong with your input.");
+
+        //         //Log technical details for developers
+        //         console.error("Technical error details:", error.message);
+
+        //         console.log("false");
+        //     }
+        // }
+
+        // validateUsername("abc");
+        // // validateUsername("kavy1305");  
+
+        //14. Debug Broken Validation
+
+        // const regex = /\d+/;
+        // // const input = "number is nothing";
+        // const input = "number is 10";
+
+        // const result = regex.exec(input);
+
+        // if (result !== null) {
+        //     console.log("Number is:", result[0]);
+        // } else {
+        //     console.log("Invalid input: no number found");
+        // }
+
+    </script>
+</body>
+
+</html>

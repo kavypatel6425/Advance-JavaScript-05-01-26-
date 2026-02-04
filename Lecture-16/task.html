@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+
+    <button id="btn" onclick="click()">Click</button>
+
+    <script>
+        //Task 1: Basic Closure
+
+        // function outer() {
+        //     let count = 0;
+
+        //     function inner() {
+        //         count++;
+        //         console.log(count);
+        //     }
+        //     return inner;
+        // }
+
+        // let counter = outer();
+        // counter();
+        // counter();
+        // counter();
+
+        // Task 2: Access Parent Variable
+
+        // function Parent () {
+        //     let message = "hallo";
+
+        //     function Child() {
+        //         console.log(message);
+        //     }
+        //     return Child;
+        // }
+
+        // let a = Parent()
+        // a();
+
+        //Task 3: Multiple Calls, Same Closure
+
+        // function outer() {
+        //     let count = 0;
+
+        //     function inner() {
+        //         count++;
+        //         console.log(count);
+        //     }
+        //     return inner;
+        // }
+
+        // let counter = outer();
+        // counter();
+        // counter();
+        // counter();
+
+        //Task 4: Independent Closures
+        // function outer() {
+        //     let count = 0;
+
+        //     function inner() {
+        //         count++;
+        //         console.log(count);
+        //     }
+        //     return inner;
+        // }
+
+        // let counter1 = outer();
+        // let counter2 = outer();
+
+        // counter1();
+        // counter1();
+
+        // counter2();
+        // counter2();
+
+        // Task 5: Lexical Scope vs Global Scope
+
+        // var Global = "Global";
+
+        // function outer() {
+        //     let Local = "Local";
+        //     return function inner() {
+        //         console.log(Global);
+        //         console.log(Local);
+        //     }
+        //     return inner;
+        // }
+
+        // let b = outer();
+        // b()
+
+        //Global
+
+        //Global is Global Execution Context
+        // Accessible anywhere in the program
+
+        //Local
+
+        //Lexical Environment
+
+        //Task 6: Private Variable
+
+        // function employ() {
+        //     let salary = 0;
+        //     return {
+        //         getSalary(){
+        //             return salary;
+        //         },
+        //         setSalary(ammount){
+        //             salary = ammount;
+        //         }
+        //     }
+        // }
+
+        // let employSalary = employ();
+        // employSalary.setSalary(20000);
+        // console.log(employSalary.getSalary());
+
+        // Task 7: Closure in Loop (Bug Detection)
+
+        // for (var i = 1; i <= 3; i++) {
+        //     setTimeout(() => {
+        //         console.log(i);
+        //     }, 1000);
+        // }
+
+        //var is function-scoped, not block-scoped
+
+        //Task 8: Fix Loop Closure Issue
+
+        // for (let i = 1; i <= 3; i++) {
+        //     setTimeout(() => {
+        //         console.log(i);
+        //     }, 1000);
+        // }
+
+        //var (function scope)
+        // => var is a function scope
+        // => var can redecresan and reassing is allow
+        // => whan loop is run var redclare the vareable
+
+        //lat (let scope)
+        // => let is a block scope
+        // => lat can't redecre the variable
+
+        // Task 9: Function Factory
+
+        // function createMultiplier(factor) {
+        //     let name = factor
+        //     return function (number) {
+        //         return number * name;
+        //     };
+        // }
+
+        // const double = createMultiplier(2);
+        // const triple = createMultiplier(3);
+
+        // console.log(double(10));
+        // console.log(triple(10));
+
+        //Task 10: Configuration Function
+
+        // function configuration() {
+        //     return function () {
+        //         let object = {
+        //             name:"kavy",
+        //             age : 19
+        //         }
+        //     }
+        // }
+
+        // Task 11: Closure with setTimeout
+
+        // function delayedMessage(msg) {
+        //     setTimeout(function () {
+        //         console.log(msg);
+        //     }, 1000);
+        // }
+
+        // delayedMessage("Hello");
+
+        //Task 12: Closure with setInterval
+
+        // function startTimer(limit) {
+        //     let count = 0;
+
+        //     const a = setInterval(function () {
+        //         console.log(count);
+        //         count++;
+
+        //         if (count > limit) {
+        //             clearInterval(a)
+        //         }
+        //     }, 1000);
+        // }
+
+        // startTimer(5);
+
+        //Task 13: Memoization
+
+        //Task 14: Event Handler Closure
+
+        // function Handler() {
+        //     let count = 0;
+
+        //     return function () {
+        //         count++;
+        //         console.log(count);
+        //     }
+
+        // }
+
+        // let button = document.getElementById("btn");
+        // let clickHandler = Handler()
+        // button.addEventListener("click",clickHandler)
+
+        //Task 15: Memory Retention Check
+
+        // function heavyTask() {
+        //     let largeData = new Array(1000000).fill("data");
+
+        //     return function () {
+        //         console.log(largeData.length);
+        //     };
+        // }
+
+        // const task = heavyTask();
+        // task()
+    </script>
+</body>
+
+</html>
