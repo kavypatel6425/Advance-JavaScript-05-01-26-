@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        table th{
+            padding: 20px 60px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <button onclick="loadData()">Fetch Data</button>
+
+    <table border="2" id="table">
+        <tr>
+            <th>No.</th>
+            <th>User Name</th>
+            <th>Password</th>
+            <th>Change</th>
+        </tr>
+        <tbody id="tbody">Table</tbody>
+    </table>
+
+    <script>
+        const userRes =  fetch("https://697865aecd4fe130e3d8baf1.mockapi.io/het")
+        async function loadUser() {
+            try {
+                const user1 = await userRes;
+                const user = await user1.json();
+                console.log(user);
+
+                
+
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        loadUser()
+                
+        function updetUser() {
+            
+        }
+        const abc = document.getElementById("tbody").innerHTML
+
+    </script>
+</body>
+</html>
