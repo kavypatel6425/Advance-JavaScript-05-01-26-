@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task</title>
+    <title>Edit Modal</title>
     <style>
         table th {
             padding: 20px 60px;
@@ -17,7 +17,7 @@
             border: none;
         }
         .Edit:hover{
-            background-color: black;
+            background-color:  black;
             transition-duration: 0.5s;
         }
     </style>
@@ -27,6 +27,7 @@
 
 
     <button onclick="loadData()" >Fetch Data</button>
+    
 
     <table border="2" id="table">
         <tr>
@@ -64,13 +65,16 @@
                     <td>${data.id}</td>
                     <td>${data.name}</td>
                     <td>${data.address}</td>
-                    <td><button onclick="Edit()" class="Edit">Edit</button></td>
-                    
+                    <td>
+                        <button onclick="editRow(${data.id})" class="Edit">Edit</button>
+                    </td>
                 </tr>`
             });
         }
 
-
+        function Edit(user) {
+            const editeBtn =document.addEventListener()
+        }
 
     </script>
 </body>
